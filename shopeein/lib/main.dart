@@ -1,44 +1,68 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, import_of_legacy_library_into_null_safe
 
 import 'package:flutter/material.dart';
-import 'package:splashscreen/splashscreen.dart';
+import 'package:shopeein/constant/color.dart';
+import 'package:shopeein/screens/splash.dart';
+import 'package:shopeein/widgets/buttonHome.dart';
 
 void main() {
   runApp(MaterialApp(home: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return SplashScreen.timer(
-      seconds: 14,
-      navigateAfterSeconds: AfterSplash(),
-      title: Text(
-        'Welcome In SplashScreen',
-        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+    return MaterialApp(
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.orange,
       ),
-      image: Image.network(
-        'https://flutter.io/images/catalog-widget-placeholder.png',
-      ),
-      backgroundColor: Colors.white,
-      loaderColor: Colors.red,
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
-class AfterSplash extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Welcome In SplashScreen Package'),
-        automaticallyImplyLeading: false,
-      ),
-      body: Center(
-        child: Text(
-          'Succeeded!',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0),
-        ),
+      body: ListView(
+        children: [
+          SizedBox(
+            height: 16,
+          ),
+          RoundedButton(
+            img: Icons.admin_panel_settings_sharp,
+            press: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => SplashScreen()));
+            },
+            text: ' Login ',
+            backgroundColor: mPrimaryColor,
+            textColor: Colors.white,
+          ),
+        ],
       ),
     );
   }
