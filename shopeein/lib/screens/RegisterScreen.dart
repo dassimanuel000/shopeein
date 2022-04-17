@@ -20,6 +20,7 @@ class RegisterScreenState extends State<RegisterScreen>
   GlobalKey<ScaffoldState> drawerKey = GlobalKey();
 
   TextEditingController? keyword;
+  bool _isChecked = true;
 
   @override
   void initState() {
@@ -49,22 +50,31 @@ class RegisterScreenState extends State<RegisterScreen>
               padding: const EdgeInsets.all(15.0),
               child: Column(
                 children: [
-                  Text(
-                    "Welcome to Shopeein ",
-                    style: kTitleStyle,
+                  Padding(
+                    padding: const EdgeInsets.only(top: 1.0),
+                    child: Text(
+                      "Welcome to Shopeein ",
+                      style: kTitleStyle,
+                    ),
                   ),
                   SizedBox(
                     height: 3.0,
                   ),
                   Row(
                     children: [
-                      Text(
-                        "Your Mobile number :  ",
-                        style: kSubtitleStyle,
+                      Padding(
+                        padding: const EdgeInsets.only(top: 1.0),
+                        child: Text(
+                          "Your Mobile number :  ",
+                          style: kSubtitleStyle,
+                        ),
                       ),
-                      Text(
-                        "+91  99 88 77 55 55",
-                        style: kSubtitleStyle,
+                      Padding(
+                        padding: const EdgeInsets.only(top: 1.0),
+                        child: Text(
+                          "+91  99 88 77 55 55",
+                          style: kSubtitleStyle,
+                        ),
                       ),
                     ],
                   ),
@@ -110,16 +120,28 @@ class RegisterScreenState extends State<RegisterScreen>
               padding: const EdgeInsets.all(15.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                    "I have Referals Code ",
-                    style: kSubtitleStyle,
-                  ),
-                ],
+                children: [],
               )),
           SizedBox(
             height: 20.0,
           ),
+          Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    "I agree ",
+                    style: kSubtitleStyle,
+                  ),
+                  InkWell(
+                    child: Text(
+                      " Terms & Condition",
+                      style: TextStyle(color: mButtonFacebookColor),
+                    ),
+                  )
+                ],
+              )),
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: RoundedButton(

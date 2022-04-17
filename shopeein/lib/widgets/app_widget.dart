@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -145,10 +147,13 @@ class RoundedInput extends StatelessWidget {
         filled: true, // dont forget this line
         contentPadding: EdgeInsets.symmetric(vertical: 4, horizontal: 16),
         hintText: hintText,
-        hintStyle: TextStyle(color: mPrimaryTextColor),
+        hintStyle: TextStyle(
+            color: appTextColorSecondary,
+            fontFamily: 'Roboto',
+            fontStyle: FontStyle.normal),
         suffixText: suffixText,
         suffixStyle: TextStyle(
-            color: mPrimaryColor,
+            color: appTextColorSecondary,
             fontSize: 12,
             fontFamily: 'Montserrat-Medium'),
         border: UnderlineInputBorder(

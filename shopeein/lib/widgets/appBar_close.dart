@@ -36,6 +36,16 @@ AppBar appBarTitle(BuildContext context, String title) {
   return AppBar(
     backgroundColor: Colors.white,
     elevation: 0,
+    leading: InkWell(
+      onTap: () {
+        Navigator.pop(context);
+      },
+      child: Icon(
+        Icons.arrow_back_rounded,
+        color: contentTextColor,
+        size: 20.0,
+      ),
+    ),
     title: Text(
       title,
       style: kTitleStyle,

@@ -1,8 +1,9 @@
-// ignore_for_file: curly_braces_in_flow_control_structures, unnecessary_new
+// ignore_for_file: curly_braces_in_flow_control_structures, unnecessary_new, prefer_const_constructors
 
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:nb_utils/nb_utils.dart';
 import 'package:shopeein/constant/color.dart';
 import 'package:shopeein/widgets/appBar_close.dart';
 import 'package:http/http.dart' as http;
@@ -57,7 +58,8 @@ class News extends StatelessWidget {
   const News({Key? key}) : super(key: key);
 
   Future getData() async {
-    var url = 'https://trouver-un-candidat.com/test/new.php';
+    var url =
+        'https://raw.githubusercontent.com/dassimanuel000/shopeein/init/new.json';
     var response = await http.get(Uri.parse(url));
     Map<String, dynamic> map = json.decode(response.body);
     List<dynamic> data = map["news"];
@@ -124,17 +126,28 @@ class News extends StatelessWidget {
                                             CrossAxisAlignment.start,
                                         children: [
                                           SingleChildScrollView(
-                                            child: Column(
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
                                               children: [
-                                                Text(
-                                                  "${list[index]['_title']}",
-                                                  style: const TextStyle(
-                                                      fontSize: 14.0),
+                                                SizedBox(
+                                                  width: context.width() / 3,
+                                                  child: Text(
+                                                    "${list[index]['_title']}",
+                                                    style: const TextStyle(
+                                                        fontSize: 14.0),
+                                                  ),
                                                 ),
+                                                Icon(
+                                                    Icons
+                                                        .arrow_forward_ios_outlined,
+                                                    size: 15.0,
+                                                    color:
+                                                        appTextColorSecondary),
                                               ],
                                             ),
                                           ),
-                                          const Spacer(),
                                           Text(
                                             "${list[index]['date']}",
                                             overflow: TextOverflow.ellipsis,
@@ -165,19 +178,23 @@ class News extends StatelessWidget {
                                                       borderRadius:
                                                           BorderRadius.circular(
                                                               4),
-                                                      color: successColor,
+                                                      color: mBackgroundColor,
                                                     ),
                                                     child: Text(
-                                                      'Read More',
+                                                      '\$ 5420.00',
                                                       style: Theme.of(context)
                                                           .textTheme
                                                           .labelSmall!
                                                           .copyWith(
                                                             color:
-                                                                mBackgroundColor,
+                                                                iconColorSecondary,
                                                           ),
                                                     ),
-                                                  )
+                                                  ),
+                                                  Text(
+                                                    "Status : Pending",
+                                                    style: kbordStyle,
+                                                  ),
                                                 ],
                                               ),
                                             ),

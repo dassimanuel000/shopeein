@@ -86,57 +86,14 @@ class LoginScreenState extends State<LoginScreen>
               padding: const EdgeInsets.all(15.0),
               child: Container(
                 decoration: boxDecoration(
-                  color: iconColorSecondary,
+                  color: mBorderColor,
                 ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 15.0, top: 5.0),
-                        child: TextField(
-                          controller: keyword, //set user_pass controller
-                          decoration: InputDecoration(
-                            fillColor: iconColorSecondary,
-                            filled: true, // dont forget this line
-                            hintText: '+91 ',
-                            border: InputBorder.none,
-                            isDense: true,
-                            contentPadding: EdgeInsets.all(0),
-                          ),
-                          textAlignVertical: TextAlignVertical.center,
-                          onSubmitted: (value) {},
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: 10,
-                      height: 30,
-                      color: iconColorSecondary,
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 15.0, top: 5.0),
-                        child: TextField(
-                          controller: keyword, //set user_pass controller
-                          decoration: InputDecoration(
-                            fillColor: iconColorSecondary,
-                            filled: true, // dont forget this line
-                            hintText: ' Enter Mobile No',
-                            border: InputBorder.none,
-                            isDense: true,
-                            contentPadding: EdgeInsets.all(0),
-                          ),
-                          textAlignVertical: TextAlignVertical.center,
-                          onSubmitted: (value) {},
-                        ),
-                      ),
-                    ),
-                  ],
+                child: RoundedInput(
+                  hintText: '+91 ' + ' ' + ' 99 88 77 55 55',
                 ),
               )),
           SizedBox(
-            height: 20.0,
+            height: 3.0,
           ),
           Padding(
               padding: const EdgeInsets.all(15.0),
