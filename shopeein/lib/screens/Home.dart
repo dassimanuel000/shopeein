@@ -27,7 +27,8 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return PersistentTabView(
+    return Text(
+        "data"); /*PersistentTabView(
       context,
       controller: _controller,
       screens: _buildScreens(),
@@ -67,7 +68,7 @@ class _HomeState extends State<Home> {
       ),
       navBarStyle:
           NavBarStyle.style15, // Choose the nav bar style with this property.
-    );
+    );*/
   }
 
   List<Widget> _buildScreens() {

@@ -141,6 +141,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.4"
+  curved_navigation_bar:
+    dependency: "direct main"
+    description:
+      name: curved_navigation_bar
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.7"
   dbus:
     dependency: transitive
     description:
@@ -338,6 +345,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.0"
+  molten_navigationbar_flutter:
+    dependency: "direct main"
+    description:
+      name: molten_navigationbar_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.1"
   nb_utils:
     dependency: "direct main"
     description:

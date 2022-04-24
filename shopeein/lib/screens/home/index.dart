@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:shopeein/constant/color.dart';
 import 'package:shopeein/screens/home/apphome.dart';
+import 'package:shopeein/screens/home/navBarItems.dart';
 import 'package:shopeein/widgets/app_widget.dart';
 
 class Index extends StatefulWidget {
@@ -123,24 +124,30 @@ class _IndexState extends State<Index> {
     return AppBar(
       backgroundColor: mPrimaryColor,
       elevation: 0,
-      leading: InkWell(
-        onTap: () {
-          _scaffoldKey.currentState?.openDrawer();
-        },
-        child: Icon(
-          Icons.sort_rounded,
-          color: Colors.white,
-          size: 16.0,
-        ),
-      ),
-      title: Container(
-        height: 60.0,
-        decoration: BoxDecoration(
-          color: Colors.transparent,
-        ),
-        child: const Image(
-          image: NetworkImage('https://i.ibb.co/SQvqyjF/index.png'),
-        ),
+      leading: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          InkWell(
+            onTap: () {
+              _scaffoldKey.currentState?.openDrawer();
+            },
+            child: Icon(
+              Icons.sort_rounded,
+              color: Colors.white,
+              size: 16.0,
+            ),
+          ),
+          Container(
+            height: 50.0,
+            decoration: BoxDecoration(
+              color: Colors.transparent,
+            ),
+            child: const Image(
+              height: 50.0,
+              image: NetworkImage('https://i.ibb.co/SQvqyjF/index.png'),
+            ),
+          ),
+        ],
       ),
       actions: <Widget>[
         InkWell(

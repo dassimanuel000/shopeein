@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:shopeein/constant/color.dart';
 import 'package:shopeein/screens/Home.dart';
 import 'package:shopeein/screens/adressScreen.dart';
+import 'package:shopeein/screens/home/index.dart';
+import 'package:shopeein/screens/home/navBarItems.dart';
 import 'package:shopeein/screens/home/productDetail.dart';
 import 'package:shopeein/screens/login2screen.dart';
 import 'package:shopeein/screens/optScreen.dart';
@@ -102,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
               img: Icons.home,
               press: () {
                 Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => Home()));
+                    .push(MaterialPageRoute(builder: (context) => Full()));
               },
               text: ' Home Screen ',
               backgroundColor: mPrimaryColor,

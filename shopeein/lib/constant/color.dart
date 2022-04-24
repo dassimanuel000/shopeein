@@ -44,3 +44,9 @@ const kbordStyle = TextStyle(
     color: Color(0xFF01002f),
     fontWeight: FontWeight.bold,
     fontFamily: 'Roboto');
+
+const kmininStyle = TextStyle(
+    fontSize: 9,
+    color: appTextColorSecondary,
+    fontWeight: FontWeight.w100,
+    fontFamily: 'Roboto');

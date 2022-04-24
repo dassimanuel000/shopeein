@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:shopeein/constant/color.dart';
 import 'package:shopeein/screens/home/allCategorie.dart';
+import 'package:shopeein/screens/home/navBarItems.dart';
 import 'package:shopeein/screens/home/productList.dart';
 import 'package:shopeein/widgets/app_widget.dart';
 

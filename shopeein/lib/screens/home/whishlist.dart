@@ -6,6 +6,7 @@ import 'package:nb_utils/nb_utils.dart';
 import 'package:shopeein/constant/color.dart';
 import 'package:shopeein/screens/cart.dart';
 import 'package:shopeein/screens/home/apphome.dart';
+import 'package:shopeein/screens/home/navBarItems.dart';
 import 'package:shopeein/widgets/appBar_close.dart';
 import 'package:shopeein/widgets/app_widget.dart';
 
